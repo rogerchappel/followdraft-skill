@@ -6,8 +6,7 @@ Turns rough meeting notes into follow-up email drafts, action registers, and app
 
 ```bash
 npm install
-npm test
-npm run smoke
+npm run release:check
 ```
 
 Example:
@@ -33,3 +32,7 @@ followdraft draft fixtures/meeting-notes.txt --format markdown
 ## Safety Notes
 
 The tool never sends email, updates a CRM, or writes to external systems. It drafts local text and flags approvals.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development expectations and [SECURITY.md](SECURITY.md) for vulnerability reporting and data handling guidance.

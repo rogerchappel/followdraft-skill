@@ -14,7 +14,12 @@
     "src",
     "SKILL.md",
     "docs",
-    "fixtures"
+    "fixtures",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
   ],
   "scripts": {
     "test": "node --test",
