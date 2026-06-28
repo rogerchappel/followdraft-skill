@@ -9,11 +9,19 @@ npm install
 npm run release:check
 ```
 
-Example:
+Generate a Markdown packet from the included fixture:
 
 ```bash
 followdraft draft fixtures/meeting-notes.txt --format markdown
 ```
+
+Generate JSON for an agent pipeline:
+
+```bash
+followdraft draft fixtures/meeting-notes.txt --format json
+```
+
+The release gate runs repository checks, tests, the CLI smoke command, and an npm package contents smoke test.
 
 ## What It Produces
 
@@ -21,6 +29,17 @@ followdraft draft fixtures/meeting-notes.txt --format markdown
 - JSON output for agent pipelines.
 - Markdown output for humans reviewing an agent run.
 - Safety notes before any external action.
+
+## Verification
+
+```bash
+npm run check
+npm test
+npm run smoke
+npm run package:smoke
+```
+
+`package:smoke` verifies the published tarball would include the CLI, library entrypoint, docs, fixture, and safety files.
 
 ## Limits
 
