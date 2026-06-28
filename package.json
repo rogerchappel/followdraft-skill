@@ -26,8 +26,8 @@
     "check": "node scripts/check.js",
     "build": "node scripts/build.js",
     "smoke": "node src/cli.js draft fixtures/meeting-notes.txt --format markdown",
-    "package:smoke": "npm pack --dry-run",
-    "release:check": "npm run check && npm test && npm run build && npm run smoke && npm run package:smoke"
+    "package:smoke": "node scripts/package-smoke.js",
+    "release:check": "bash scripts/validate.sh && npm run package:smoke"
   },
   "keywords": [
     "agent-skill",
